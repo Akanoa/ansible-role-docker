@@ -5,7 +5,7 @@
 {% else %}
 {
     {% if docker_userns_remap_enable %}
-    "userns-remap": "{{ docker_userns_remap_user:docker_userns_remap_group }}",
+    "userns-remap": "{{ docker_userns_remap_user }}:{{ docker_userns_remap_group }}",
     {% endif %}
     {% if docker_insecure_registries is defined %}
     "insecure-registries": [
